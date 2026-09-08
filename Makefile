@@ -4,10 +4,12 @@ TESTS := ./tests/...
 
 PORT := 7000
 
-run: build
+run: $(NAME)
 	@$(NAME) $(PORT)
 
-build:
+build: $(NAME)
+
+$(NAME):
 	@go build -o $(NAME) $(SRC)
 
 test:
@@ -15,3 +17,5 @@ test:
 
 clean:
 	rm -rf $(NAME)
+
+.PHONY: run build test clean
