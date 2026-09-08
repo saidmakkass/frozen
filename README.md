@@ -1,11 +1,14 @@
 # frozen
 
-An IRC (Internet Relay Chat) implementation in go.
+An IRC (Internet Relay Chat) server implementation in go.
 
 ## Goals
 - Learn go.
 - Get practical experience in implementing protocols.
 - Have fun.
+## Constraints
+- Only standard library.
+- Must use concurrency and goroutines.
 ## Implemented Features
 - [ ] user sign-up (unique username thats immutable and password)
 - [ ] user sign-in
@@ -22,13 +25,14 @@ An IRC (Internet Relay Chat) implementation in go.
 
 ## Project Structure
 ```
-frozen
-└── bin
-└── cmd
-    └── frozen
-        ├── main.go
-└── internal
-└── tests
-├── go.mod
-└── README.md
+└── frozen
+    └── bin
+    └── cmd
+        └── frozen
+            ├── main.go
+    └── internal
+    └── tests
+    ├── go.mod
+    ├── Makefile
+    └── README.md
 ```
