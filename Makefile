@@ -4,12 +4,10 @@ TESTS := ./tests/...
 
 PORT := 7000
 
-run: $(NAME)
+run: build
 	@$(NAME) $(PORT)
 
-build: $(NAME)
-
-$(NAME):
+build:
 	@go build -o $(NAME) $(SRC)
 
 test:
